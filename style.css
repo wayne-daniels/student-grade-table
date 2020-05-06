@@ -1,0 +1,19 @@
+body{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 5%;
+  justify-content: center;
+}
+th.bold{
+  border-width: 3px;
+  border-color: black;
+}
+td.bold-data {
+  border-width: 0px 3px 0px 3px;
+  border-color: black;
+}
+td.bold-data2 {
+  border-width: 0px 3px 3px 3px;
+  border-color: black;
+}
