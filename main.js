@@ -1,3 +1,5 @@
-// eslint-disable-next-line no-undef
-var app = new App();
+/* eslint-disable no-undef */
+var table = document.querySelector('table');
+var gradeTable = new GradeTable(table);
+var app = new App(gradeTable);
 app.start();
