@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // eslint-disable-next-line no-unused-vars
 class App {
   constructor(gradeTable) {
@@ -5,6 +6,7 @@ class App {
     this.handleGetGradesError + this.handleGetGradesError.bind(this);
     this.gradeTable = gradeTable;
     this.pageHeader = pageHeader;
+    this.gradeForm = gradeForm;
   }
   handleGetGradesError(error) {
     console.error(error);
