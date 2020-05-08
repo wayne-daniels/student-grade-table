@@ -9,5 +9,5 @@ var pageHeader = new PageHeader(hdr);
 var gForm = document.querySelector('form');
 var gradeForm = new GradeForm(gForm);
 
-var app = new App(gradeTable, pageHeader);
+var app = new App(gradeTable, pageHeader, gradeForm);
 app.start();
