@@ -8,7 +8,6 @@ class App {
     this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this);
     this.handleGetGradesError = this.handleGetGradesError.bind(this);
     this.createGrade = this.createGrade.bind(this);
-    this.deleteGradeError = this.deleteGrade.bind(this);
     this.handleCreateGradeError = this.handleCreateGradeError.bind(this);
     this.handleCreateGradeSuccess = this.handleCreateGradeSuccess.bind(this);
     this.handleDeleteGradeError = this.handleDeleteGradeError.bind(this);
