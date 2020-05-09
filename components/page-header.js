@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 class PageHeader {
   constructor(headerElement) {
     this.headerElement = headerElement;
