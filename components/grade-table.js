@@ -1,23 +1,38 @@
+/* eslint-disable no-unused-vars */
 class GradeTable {
-  constructor(tableElement) {
+  constructor(tableElement, noGradesElement) {
     this.tableElement = tableElement;
+    this.noGradesElement = noGradesElement;
   }
   updateGrades(grades) {
-    var tBody = this.tableElement.querySelector('tbody');
-    for (var i = 0; i < grades.length; i++) {
-      var tRow = document.createElement('tr');
-      var tDataName = document.createElement('td');
-      var tDataCourse = document.createElement('td');
-      var tDataGrade = document.createElement('td');
+    var tBody = $(this.tableElement).find('tbody');
+    $(tBody).empty();
 
-      tDataName.textContent = grades[i].name;
-      tDataCourse.textContent = grades[i].course;
-      tDataGrade.textContent = grades[i].grade;
+    grades.forEach(student => {
+      tBody.append(this.renderGradeRow(student, this.deleteGrade));
+    })
 
-      tRow.appendChild(tDataName);
-      tRow.appendChild(tDataCourse);
-      tRow.appendChild(tDataGrade);
-      tBody.appendChild(tRow);
+    if (grades) {
+      return;
+    } else {
+      $(this.tableElement).find('p').addClass('d-block');
     }
+  }
+  onDeleteClick(deleteGrade) {
+    this.deleteGrade = deleteGrade;
+  }
+  renderGradeRow(data, deleteGrade) {
+
+    const delButton = $('<button>DELETE</button>')
+      .addClass('btn-sm btn-danger')
+      .click(() => deleteGrade(data.id));
+
+    const tRow = $('<tr>')
+      .append($('<td>').append(data.name))
+      .append($('<td>').append(data.course))
+      .append($('<td>').append(data.grade))
+      .append($('<td>').append(delButton));
+
+    return tRow;
   }
 }

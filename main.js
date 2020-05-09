@@ -1,7 +1,8 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+var noGradeRec = document.querySelector('p');
+
 var table = document.querySelector('table');
-var gradeTable = new GradeTable(table);
+var gradeTable = new GradeTable(table, noGradeRec);
 
 var hdr = document.querySelector('header');
 var pageHeader = new PageHeader(hdr);
